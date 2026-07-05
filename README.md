@@ -1,11 +1,11 @@
 # Expense Tracker
 
-## OverVie 
+## Overview
 I built this project to practice using object-oriented programming in Python while creating an application for managing personal expenses. This program allows users to add, remove, view, and calculate the total of there expenese through a menu.
 
 ## How it Works
 
-The project is organized into two parts: "Expenses" and "Expenses tracker.
+The project is organized into two parts: "Expenses" and "ExpenseTracker.
 
 The "Expense" represents a single expense and stores three pieces of information:
 
