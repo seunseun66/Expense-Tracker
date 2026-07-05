@@ -5,7 +5,7 @@ I built this project to practice using object-oriented programming in Python whi
 
 ## How it Works
 
-The project is organized into two parts: "Expenses" and "ExpenseTracker.
+The project is organized into two Classes: "Expenses" and "ExpenseTracker.
 
 The "Expense" represents a single expense and stores three pieces of information:
 
@@ -25,11 +25,11 @@ The "ExpenseTracker" manages all of the expenses by storing them in an array. It
 
 -Calculate the total amount spent
 
-When the program starts, it shows a menu that allows the user to choose an action. Based on the user's pick, the action is called until the user decides to exit the application.
+When the program starts, it shows a menu that allows the user to choose a class. Based on the user's pick, the class is called until the user decides to exit the application.
 
 ## Why I used this approach
 
-I implemented object-oriented programming by separating the responsibilities of the application. The "Expense" action is responsible for storing information about an individual expense, while the expense "ExpenseTracker" manages the collection of all expenses and the operations that can be performed.
+I implemented object-oriented programming by separating the responsibilities of the application. The "Expense" class is responsible for storing information about an individual expense, while the "ExpenseTracker" manages the collection of all expenses and the operations that can be performed.
 
 I also used a menu interface with a while loop so users can continue interacting with the program without restarting it after each action.
 
