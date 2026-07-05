@@ -1,79 +1,44 @@
-# Expense-Tracker
-The purpose of this expense tracker is to help you easily log and categorize your expenses, giving you better visibility into your spending habits
-class Expense:
-    def __init__(self, amount, description, date):
-        self.amount = amount
-        self.description = description
-        self.date = date
+# Expense Tracker
+
+## OverVie 
+I built this project to practice using object-oriented programming in Python while creating an application for managing personal expenses. This program allows users to add, remove, view, and calculate the total of there expenese through a menu.
+
+## How it Works
+
+The project is organized into two parts: "Expenses" and "Expenses tracker.
+
+The "Expense" represents a single expense and stores three pieces of information:
+
+-Date
+
+-Description
+
+-Amount
+
+The "ExpenseTracker" manages all of the expenses by storing them in an array. It has a variety of options:
+
+-Add a new expense
+
+-Remove an existing expense
+
+-Display all saved expenses
+
+-Calculate the total amount spent
+
+When the program starts, it shows a menu that allows the user to choose an action. Based on the user's pick, the action is called until the user decides to exit the application.
+
+## Why I used this approach
+
+I implemented object-oriented programming by separating the responsibilities of the application. The "Expense" action is responsible for storing information about an individual expense, while the expense "ExpenseTracker" manages the collection of all expenses and the operations that can be performed.
+
+I also used a menu interface with a while loop so users can continue interacting with the program without restarting it after each action.
+
+# What I learned
+
+-Object-oriented programming
+
+-Working with arrays to store data
+
+-Building menu-driven command-line applications
 
 
-class ExpenseTracker:
-    def __init__(self):
-        self.expenses = []
-
-    def add_expense(self, expense):
-        self.expenses.append(expense)
-
-    def remove_expense(self, index):
-        if 0 <= index < len(self.expenses):
-            del self.expenses[index]
-            print("Expense removed successfully.")
-        else:
-            print("Invalid expense index.")
-
-    def view_expenses(self):
-        if len(self.expenses) == 0:
-            print("No expense found.")
-        else:
-            print("Expense List:")
-            for i, expense in enumerate(self.expenses, start=1):
-                print(f"{i}. Date: {expense.date}, Description: {expense.description}, Amount: ${expense.amount:.2f}")
-
-    def total_expenses(self):
-        total = sum(expense.amount for expense in self.expenses)
-        print(f"Total Expenses: ${total:.2f}")
-
-
-
-def main():
-    tracker = ExpenseTracker()
-
-    while True:
-        print("\nExpense Tracker Menu:")
-        print("1. Add Expense")
-        print("2. Remove Expense")
-        print("3. View Expenses")
-        print("4. Total Expenses")
-        print("5. Exit")
-
-        choice = input("Enter your choice (1-5): ")
-
-        if choice == '1':
-            amount = float(input("Enter expense amount: "))
-            description = input("Enter expense description: ")
-            date = input("Enter expense date (YYYY-MM-DD): ")
-            expense = Expense(amount, description, date)
-            tracker.add_expense(expense)
-            print("Expense added successfully.")
-
-        elif choice == '2':
-            index = int(input("Enter the index of the expense to remove: ")) - 1
-            tracker.remove_expense(index)
-
-        elif choice == '3':
-            tracker.view_expenses()
-
-        elif choice == '4':
-            tracker.total_expenses()
-
-        elif choice == '5':
-            print("Exiting Expense Tracker. Goodbye!")
-            break
-
-        else:
-            print("Invalid choice. Please try again.")
-
-
-
-if __name__ == "__main__":
-    main()
